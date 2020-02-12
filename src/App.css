@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*     전체 페이지     */
+.Container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background: rgba(var(--b3f,250,250,250),1);
+  width: 100%;
+  overflow: hidden;
+}
+
+/*        First Article     */
+.firstArticle {
+  width: 350px;
+  height: 380px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+/*        로고       */
+.logo {
+  width: 175px;
+  margin: 20px 0;
+}
+
+
+/*        로그인 폼      */
+.UserForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/*      이메일, 비밀번호, 버튼   */
+.Email, .Password {
+  background-color: #fafafa;
+  outline: none;
+  box-shadow: none;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.LoginBtn {
+  background-color: #3897f0;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/*         line        */
+.Line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.LeftLine, .RightLine {
+  border-bottom: 1px solid rgba(var(--b38,219,219,219),1);
+}
+
+/*       Second Article     */
+.SecondArticle {
+  width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  color: #262626;
+  font-size: 14px;
+  padding: 25px 0;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.Text {
+  margin: 0;
+  font-weight: 200;
+}
+
+.join {
+  margin: 0;
+  font-weight: bold;
+  color: #3897f0;
+}
+
+/*     Third Article    */
+
+.ThirdArticle {
+  width: 350px;
+  box-sizing: border-box;
+  text-align: center;
+}
+  
+.DownloadMsg {
+  margin: 20px 20px;
+  color: #262626;
+  font-size: 14px;
+}
+
+.Btns {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px 0;
+}
+  
+.Ios {
+  width: 136px;
+  height: 40px;
+  margin-right: 5px;
+  padding: 0;
+  background-image: url("https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png");
+  background-size : cover;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.Android {
+  width: 135px;
+  height: 40px;
+  margin-left: 5px;
+  padding: 0;
+  background-image: url("https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png");
+  background-size : cover;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*     footer      */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+  margin: 90px 0 0 0;
+
+}
+
+.footerContents {
+  color: #003569;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 600;
+  width: 630px;
+}
+
+
+.copyRight {
+  color: #999999;
+  font-size: 12px;
+  font-weight: 600;
 }
