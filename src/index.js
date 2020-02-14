@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './LoginForm';
-import Main from './Main';
+import LoginForm from './pages/LoginForm';
+//import Main from './pages/Main';
 
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<LoginForm />, document.getElementById('root'));
