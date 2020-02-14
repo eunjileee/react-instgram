@@ -18,7 +18,7 @@ class Form extends Component {
     handleChange = (e) => {
         this.setState({
             [e.target.name] : e.target.value,// 이렇게 state업데이트되면 render()호출 + ~did호출
-        });
+            this.state.password > 0 && this.state.email > 0
     }
 
     handleSubmit= (e) => {
@@ -27,6 +27,7 @@ class Form extends Component {
         this.setState({ // 상태 초기화
           email: '',
           password: '',
+
         })
     }
 
@@ -53,7 +54,7 @@ class Form extends Component {
                     <button 
                         type = "submit" 
                         className = "loginBtn"
-                        style = { (this.state.password > 0) && (this.state.email) > 0 ? { opacity : 0.4 } : { opacity : 1 }}>
+                        style = {}>
                         로그인
                     </button>
                 </form>
