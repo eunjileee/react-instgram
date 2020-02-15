@@ -43,7 +43,7 @@
 
 
 /*      이메일, 비밀번호, 버튼   */
-input {
+.userForm input {
   background-color: #fafafa;
   outline: none;
   box-shadow: none;

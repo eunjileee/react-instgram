@@ -9,16 +9,15 @@ class Form extends Component {
         this.state = { //초기 값
           email : '',
           password : '',
-          button: false
+          style : false,
         }
     };
 
 
-
     handleChange = (e) => {
         this.setState({
-            [e.target.name] : e.target.value,// 이렇게 state업데이트되면 render()호출 + ~did호출
-            this.state.password > 0 && this.state.email > 0
+            [e.target.name] : e.target.value,
+        })
     }
 
     handleSubmit= (e) => {
@@ -27,10 +26,16 @@ class Form extends Component {
         this.setState({ // 상태 초기화
           email: '',
           password: '',
-
         })
     }
 
+    buttonOnChange = () => {
+        this.setState({ style : true })
+    }
+
+
+    
+    
     render () {
         return (
             <div className = "firstArticle">
@@ -54,7 +59,8 @@ class Form extends Component {
                     <button 
                         type = "submit" 
                         className = "loginBtn"
-                        style = {}>
+                        onChange = {this.buttonOnChange}
+                        style = { this.state.email.length > 0 && this.state.password.length > 0 ? { opacity : "1" } : { opacity : "0.4" }}>
                         로그인
                     </button>
                 </form>

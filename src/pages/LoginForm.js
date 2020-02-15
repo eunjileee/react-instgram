@@ -1,9 +1,9 @@
 import React from 'react';
 import './LoginForm.css';
-import Form from '../components/form';
-import SubForm from '../components/sub_form';
+import Form from '../components/Form';
+import SubForm from '../components/SubForm';
 import AppDownload from '../components/AppDownload';
-import Footer from '../components/footer';
+import Footer from '../components/Footer';
 
 
 class LoginForm extends React.Component {

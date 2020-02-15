@@ -3,6 +3,7 @@ body {
     margin: 0;
     height: auto;
     overflow: scroll;
+    background-color: rgba(var(--b3f,250,250,250),1);
 }
 
 nav {
@@ -89,7 +90,6 @@ nav {
 /*         main         */
 
 .main {
-    background-color: rgba(var(--b3f,250,250,250),1);
     width: 100%;
     height: auto;
     display: flex;
@@ -109,7 +109,7 @@ article {
     position: relative;
     background-color: white;
     border-radius: 3px;
-    margin: 0px 10px;
+    margin: 0px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -137,8 +137,9 @@ article {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid lightgray;    
-    background-color: lightgray;
+    border: 1px solid lightgray;  
+    background-image: url(https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/73546106_459851491338066_8192954810689912832_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=Lt8KVp0HqRQAX-0FhZP&oh=d0f1c01e467ffb54d922cf370e79bd36&oe=5ECEA63A);
+    background-size: cover;
 }
 
 .userInfo {
@@ -171,9 +172,8 @@ article {
 /*         Image           */
 
 .feedImg {
-    width: 615px;
-    height: 615px;
-    background-color: lightgray;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -216,7 +216,8 @@ article {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: lightgray;
+    background-image: url(https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/73546106_459851491338066_8192954810689912832_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=Lt8KVp0HqRQAX-0FhZP&oh=d0f1c01e467ffb54d922cf370e79bd36&oe=5ECEA63A);
+    background-size: cover;
 }
 
 .likeComment {
@@ -242,13 +243,10 @@ article {
 
 .userId {
     float: left;
-    width: 200px;
-    height: auto;
     font-size: 14px;
     font-weight: bold;
     color: black;
-    float: left;
-    margin: 0 5px 5px 0;
+    padding-right: 5px;
 }
 
 .comments {
@@ -267,7 +265,7 @@ article {
 .time {
     font-size: 12px;
     color: gray;
-    padding: 3px 0 8px 18px;
+    padding: 5px 0 8px 18px;
 }
 
 
@@ -281,6 +279,8 @@ article {
     border-top: 1px solid lightgray;
     width: 100%;
     height: 56px;
+    padding: 15px 10px;
+    box-sizing: border-box;
 }
 
 
@@ -288,13 +288,13 @@ article {
     font-size: 14px;
     border: 0;
     outline: none;
+    width: 90%;
 }
 
 
-/* ::placeholder {
+.commentBox ::placeholder {
     font-size: 14px;
-    margin: 15px 0;
-} */
+}
 
 .uploadBtn {
     font-size: 14px;
@@ -315,7 +315,7 @@ a {
 
 aside {
     width: 293px;
-    margin: 0px 10px;
+    margin: 50px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,7 +324,6 @@ aside {
 
 
 .userProfile {
-    top: 50px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -336,7 +335,8 @@ aside {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: gray;
+    background-image: url(https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s150x150/73546106_459851491338066_8192954810689912832_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=Lt8KVp0HqRQAX-0FhZP&oh=d0f1c01e467ffb54d922cf370e79bd36&oe=5ECEA63A);
+    background-size: cover;
 }
 
 
@@ -351,11 +351,11 @@ aside {
 .user {
     font-weight: 600;
     color: #262626;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .name {
-    font-size: 12px;
+    font-size: 13px;
     color: #999;
 }
 
@@ -365,13 +365,11 @@ aside {
 
 
 .story {
-    position: relative;
     width: 300px;
     height: 200px;
     border: 1px solid #dbdbdb;
     background-color: white;
-    border-radius: 3px;
-    padding: 3px;
+    border-radius: 4px;
     margin-top: 20px;
 }
 
@@ -380,8 +378,9 @@ aside {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    margin: 0 14px;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 
@@ -392,112 +391,22 @@ aside {
     color: rgba(var(--f52,153,153,153),1);
 }
 
-
 .all {
     font-size: 12px;
-    font-weight: 600;
     color: black;
 }
-
-.profileScroll {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 300px;
-    height: 150px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-left: 20px;
-    overflow: scroll;
-    padding-bottom: 5px;
-    padding-top: 10px;
-}
-
 
 
 
 .recommend {
-    width: 100%;
+    width: 300px;
     height: 197px;
     border: 1px solid #dbdbdb;
     background-color: white;
-    border-radius: 3px;
-    padding: 3px;
-    margin-top: 20px;
+    border-radius: 4px;
+    margin-top: 15px;
 }
 
-
-
-
-.rec_profile_scroll {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 300px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding-left: 20px;
-    padding-bottom: 10px;
-}
-
-
-
-.profile_icon_story, .rec_profile_story {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px 0;
-}
-
-
-.all {
-    font-size: 12px;
-    color: black;
-    margin: 15px;
-}
-
-.sub {
-    color: gray;
-    font-size: 12px;
-    margin: 0;
-}
-
-.uploadStoryTime {
-    color: gray;
-    font-size: 9px;
-    margin: 0;
-}
-
-.follow {
-    color: #2A85F9;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.sub_follow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 235px;
-}
-
-
-.id_sub {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 10px;
-}
-
-.stories {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 10px;
-}
 
 footer {
     width: 300px;
