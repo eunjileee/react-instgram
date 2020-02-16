@@ -7,16 +7,10 @@ import Footer from '../components/Footer';
 
 
 class LoginForm extends React.Component {
-  handleCreate = (data) => {
-    console.log(data);
-  }
-
   render () {
     return (
         <div className = "container">
-          <Form 
-          onCreate = {this.handleCreate} 
-          />
+          <Form />
           <SubForm />
           <AppDownload />
           <Footer />

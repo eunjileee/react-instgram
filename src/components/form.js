@@ -29,11 +29,6 @@ class Form extends Component {
         })
     }
 
-    buttonOnChange = () => {
-        this.setState({ style : true })
-    }
-
-
     
     
     render () {
@@ -59,7 +54,6 @@ class Form extends Component {
                     <button 
                         type = "submit" 
                         className = "loginBtn"
-                        onChange = {this.buttonOnChange}
                         style = { this.state.email.length > 0 && this.state.password.length > 0 ? { opacity : "1" } : { opacity : "0.4" }}>
                         로그인
                     </button>

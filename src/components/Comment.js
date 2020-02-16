@@ -2,18 +2,60 @@ import React, { Component } from 'react';
 
 
 class Comment extends Component {
+    constructor(props) {
+        super(props) 
+        this.state = {
+            value: '',
+            comment: [{
+                user: '',
+                comment: '',
+            }]
+        }
+    }
+
+    onSubmitForm = (e) => {
+        e.preventDefault(); // 새로고침 방지
+        this.max_content_id += 1
+        this.setState({
+            value: '',
+            comment: [...this.state.comment, {
+                user: 'eunji',
+                comment: this.state.value
+            }]
+        })
+        console.log(this.state.comment)
+    }
+
+
+    onChange = (e) => {
+        this.setState({
+            value: e.target.value,
+        })
+    }
+
+
     render() {
+        const commentsList = this.state.comment.map(reply => (
+            <div className = "reply">
+                <span className = "userId">{reply.user}</span>
+                <span className = "comments" >{reply.comment}</span>
+            </div>
+        ))
         return (
+            
             <React.Fragment>
                 <div className = "commentBar">
-                    <div className = "userId">dmswl</div>
-                    <div className = "comments"> 유럽여행 가고싶다</div>
+                    <span className = "userId">leeeeunz_</span>
+                    <span className = "comments" >유럽여행 가고싶어요... </span>
                     <div className = "more">더 보기</div>
                 </div>
+                <span className = "reply">
+                    <div>{commentsList}</div>
+                </span>
                 <div className = "time">42분 전</div>
-                <form className = "commentBox">
-                    <input type ="text" className = "writeComment" placeholder = "댓글 달기..."/>
-                    <button className = "uploadBtn">게시</button>
+                <form className = "commentBox" onSubmit = {this.onSubmitForm}>
+                    <input type ="text" value = {this.state.value} onChange = {this.onChange.bind(this)} className = "writeComment" placeholder = "댓글 달기..."/>
+                    <button style = {{ opacity: this.state.value.length > 0 ? '1' : '0.5' }} onChange = {this.onSubmitForm.bind(this)} className = "uploadBtn">게시</button>
                 </form>
             </React.Fragment>
         )

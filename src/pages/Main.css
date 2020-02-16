@@ -105,11 +105,9 @@ nav {
 article {
     border: 1px solid #dbdbdb;
     width: 615px;
-    top: 50px;
-    position: relative;
     background-color: white;
     border-radius: 3px;
-    margin: 0px 20px;
+    margin: 50px 20px;
     display: flex;
     flex-direction: column;
 }
@@ -240,6 +238,14 @@ article {
     box-sizing: border-box;
 }
 
+.reply {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 2px 10px;
+    box-sizing: border-box;
+}
 
 .userId {
     float: left;
@@ -322,15 +328,13 @@ aside {
     box-sizing: border-box;
 }   
 
-
 .userProfile {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 3px;
+
 }
-
-
 .userImg {
     width: 50px;
     height: 50px;
@@ -371,10 +375,10 @@ aside {
     background-color: white;
     border-radius: 4px;
     margin-top: 20px;
+    overflow: scroll;
 }
 
-
-.storyBar {
+.storyBar, .recBar {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -383,6 +387,22 @@ aside {
     padding: 15px;
 }
 
+
+
+.storyProfile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3px;
+    padding: 0 0 10px 15px;
+    box-sizing: border-box;
+}
+
+.userTime {
+    font-size: 10px;
+    color: gray;
+    margin: 0;
+}
 
 
 .storyTitle {
@@ -400,18 +420,38 @@ aside {
 
 .recommend {
     width: 300px;
-    height: 197px;
+    height: 185px;
     border: 1px solid #dbdbdb;
     background-color: white;
     border-radius: 4px;
     margin-top: 15px;
 }
 
+.recFlex {
+    display: flex;
+    width: 100%;
+    padding-right: 15px; 
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.info {
+    font-size: 11px;
+    color: gray;
+    margin: 0;
+}
+
+.follow {
+    font-size: 12px;
+    color: #3897f0;
+    font-weight: 600;
+}
 
 footer {
     width: 300px;
     height: 150px;
     color: #c8c8c8;
-    font-size: 14px;
+    font-size: 12px;
     margin: 10px 0 0 0;
 }

@@ -4,4 +4,4 @@ import LoginForm from './pages/LoginForm';
 import Main from './pages/Main';
 
 
-ReactDOM.render(<LoginForm />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('root'));
