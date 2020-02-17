@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-
 class Comment extends Component {
     constructor(props) {
         super(props) 
         this.state = {
             value: '',
             comment: [{
+                id: 0,
                 user: '',
                 comment: '',
             }]
@@ -15,16 +15,22 @@ class Comment extends Component {
 
     onSubmitForm = (e) => {
         e.preventDefault(); // 새로고침 방지
-        this.max_content_id += 1
         this.setState({
             value: '',
             comment: [...this.state.comment, {
                 user: 'eunji',
-                comment: this.state.value
+                comment: this.state.value,
             }]
         })
     }
 
+    // Delete = (e) => {
+    //     console.log('clicked')
+    //     e.preventDefault(); // 새로고침 방지
+    //     this.setState({
+    //         comment: []
+    //     })
+    // }
 
     onChange = (e) => {
         this.setState({
@@ -34,7 +40,7 @@ class Comment extends Component {
 
 
     render() {
-        const commentsList = this.state.comment.map(reply => (
+        const comments = this.state.comment.map(reply => (
             <div className = "reply">
                 <span className = "userId">{reply.user}</span>
                 <span className = "comments" >{reply.comment}</span>
@@ -49,7 +55,7 @@ class Comment extends Component {
                     <div className = "more">더 보기</div>
                 </div>
                 <span className = "reply">
-                    <div>{commentsList}</div>
+                    <div>{comments}</div>
                 </span>
                 <div className = "time">42분 전</div>
                 <form className = "commentBox" onSubmit = {this.onSubmitForm}>

@@ -1,11 +1,12 @@
 import React from 'react';
 import './Main.css';
 import Gnb from '../components/Gnb';
-import Like from '../components/Like';
-import Comment from '../components/Comment';
-import FeedProfileBar from '../components/FeedProfileBar';
-import FeedIconBar from '../components/FeedIconBar';
-import FeedImage from '../components/FeedImage';
+import Feeds from '../components/Feeds';
+// import Like from '../components/Like';
+// import Comment from '../components/Comment';
+// import FeedProfileBar from '../components/FeedProfileBar';
+// import FeedIconBar from '../components/FeedIconBar';
+// import FeedImage from '../components/FeedImage';
 import UserProfile from '../components/UserProfile';
 import MainFooter from '../components/MainFooter';
 import Story from '../components/Story';
@@ -22,13 +23,10 @@ class Main extends React.Component {
             <div> 
                 <Gnb />
                 <div className = "main">
-                    <article className = "feeds"> 
-                        <FeedProfileBar />
-                        <FeedImage />
-                        <FeedIconBar />
-                        <Like />
-                        <Comment />
-                    </article>
+                    <div className = "feeds">
+                        <Feeds />
+                        <Feeds />
+                    </div>
                     <aside>  
                         <UserProfile />
                         <div className = "story">

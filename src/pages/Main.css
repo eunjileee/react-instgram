@@ -99,7 +99,11 @@ nav {
     margin-top: 77px;
 }
 
-
+.feeds {
+    display: felx;
+    flex-direction: column;
+    justify-content: center;
+}
 /*           피드              */
 /*       profile bar         */
 article {
@@ -371,6 +375,7 @@ aside {
     width: 300px;
     height:153px;
 }
+
 
 
 .story {
