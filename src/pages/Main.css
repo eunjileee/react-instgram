@@ -366,6 +366,11 @@ aside {
 
 /*             story         */
 
+.stories {
+    overflow: scroll;
+    width: 300px;
+    height:153px;
+}
 
 
 .story {
@@ -375,7 +380,6 @@ aside {
     background-color: white;
     border-radius: 4px;
     margin-top: 20px;
-    overflow: scroll;
 }
 
 .storyBar, .recBar {

@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../logo_text.png';
+import { withRouter } from 'react-router-dom'
 
 
 class Gnb extends Component {
+
+    goToSignIn() {
+        this.props.history.push('/');
+      }
+
     render() {
         return (
             <nav>
@@ -18,7 +24,7 @@ class Gnb extends Component {
                 <div className = "nav_icons">
                     <img className = "item1" alt = "둘러보기" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
                     <img className = "item2" alt = "좋아요" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"/>
-                    <img className = "item3" alt = "유저" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
+                    <img className = "item3" onClick={this.goToSignIn.bind(this)} alt = "유저" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
                 </div>
                 </div>
             </nav>
@@ -27,4 +33,4 @@ class Gnb extends Component {
 
 }
 
-export default Gnb;
+export default withRouter(Gnb);

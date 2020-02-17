@@ -33,11 +33,13 @@ class Main extends React.Component {
                         <UserProfile />
                         <div className = "story">
                                 <StoryBar />
+                                <div className = "stories">
                                 <Story />
                                 <Story />
                                 <Story />
                                 <Story />
                                 <Story />
+                                </div>
                         </div>
                         <div className = "recommend">
                             <RecBar />

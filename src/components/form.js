@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../logo_text.png';
 import fblogo from '../facebook_logo.png';
+import { withRouter } from 'react-router-dom';
 
 
 class Form extends Component {
@@ -29,7 +30,10 @@ class Form extends Component {
         })
     }
 
-    
+    goToMain() {
+        this.props.history.push('/Main');
+      }
+
     
     render () {
         return (
@@ -54,8 +58,11 @@ class Form extends Component {
                     <button 
                         type = "submit" 
                         className = "loginBtn"
+                        onClick={this.goToMain.bind(this)}
                         style = { this.state.email.length > 0 && this.state.password.length > 0 ? { opacity : "1" } : { opacity : "0.4" }}>
-                        로그인
+                        {/* <Link to = "/Main"> */}
+                            로그인
+                        {/* </Link> */}
                     </button>
                 </form>
                 <div className = "bar">
@@ -77,4 +84,4 @@ class Form extends Component {
 
 
 
-export default Form;
+export default withRouter(Form);

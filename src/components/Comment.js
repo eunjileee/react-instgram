@@ -23,7 +23,6 @@ class Comment extends Component {
                 comment: this.state.value
             }]
         })
-        console.log(this.state.comment)
     }
 
 
