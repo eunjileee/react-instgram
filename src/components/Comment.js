@@ -6,7 +6,6 @@ class Comment extends Component {
         this.state = {
             value: '',
             comment: [{
-                id: 0,
                 user: '',
                 comment: '',
             }]
@@ -40,8 +39,8 @@ class Comment extends Component {
 
 
     render() {
-        const comments = this.state.comment.map(reply => (
-            <div className = "reply">
+        const comments = this.state.comment.map((reply, i) => (
+            <div key={i} className = "reply">
                 <span className = "userId">{reply.user}</span>
                 <span className = "comments" >{reply.comment}</span>
             </div>
